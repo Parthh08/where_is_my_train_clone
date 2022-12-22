@@ -22,43 +22,53 @@ class _SpotScreenState extends State<SpotScreen> {
         child: Stack(
           children: [
             Container(
-              height: 180,
+              padding: const EdgeInsets.only(left: 100),
               width: 500,
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                ),
-                Row(
-                  children: const [Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Icon(Icons.circle_outlined),
-                  ), Text("Raipur")],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 40, left: 56),
-                  child: Stack(children: const [
-                    Divider(
-                      height: 1,
-                      thickness: 1.4,
-                    ),
-                    Icon(Icons.mobiledata_off)
-                  ]),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 50.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: const [Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.0),
                       child: Icon(Icons.circle_outlined),
-                    ), Text("Bihar")
-                  ],
-                )
-              ],
+                    ), Text("Raipur"),
+                    SizedBox(
+                      width: 280,
+                    ),
+                    Icon(Icons.close,size: 15,)],
+                  ),Stack(children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Divider(
+                          height: 1,
+                          thickness: 1.4,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 320.0),
+                        child: Icon(Icons.mobiledata_off),
+                      )
+                    ]),
+
+                  Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Icon(Icons.circle_outlined),
+                      ), const Text("jaipur"),const SizedBox(
+                        width: 285,
+                      ),
+                      const Icon(Icons.close,size: 15,)
+                    ],
+                  )
+                ],
+              ),
             ),
           ],
         ),
