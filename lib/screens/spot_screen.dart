@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SpotScreen extends StatefulWidget {
@@ -51,26 +50,35 @@ class _SpotScreenState extends State<SpotScreen> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 320.0),
+                        padding: EdgeInsets.only(left: 300.0),
                         child: Icon(Icons.mobiledata_off),
                       )
                     ]),
 
                   Row(
-                    children: [
-                      const Padding(
+                    children: const [
+
+                      Padding(
+
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: Icon(Icons.circle_outlined),
-                      ), const Text("jaipur"),const SizedBox(
+                      ), Text("jaipur"),SizedBox(
                         width: 285,
+
                       ),
-                      const Icon(Icons.close,size: 15,)
+                      Icon(Icons.close,size: 15,),
+
                     ],
-                  )
+
+                  ),
+                  IconButton(onPressed: () {},
+                    icon:const Icon(Icons.rectangle,size:75 ,color: Colors.green,),)
                 ],
+
               ),
             ),
           ],
+
         ),
       ),
     );
