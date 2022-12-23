@@ -71,8 +71,18 @@ class _SpotScreenState extends State<SpotScreen> {
                     ],
 
                   ),
-                  IconButton(onPressed: () {},
-                    icon:const Icon(Icons.rectangle,size:75 ,color: Colors.green,),)
+                  InkWell(
+                    onTap: () {
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 20),
+                      width: 400,height: 30,color: Colors.green,
+                      child: const Padding(
+                        padding: EdgeInsets.all(7.0),
+                        child: Text("Find Trains", textAlign: TextAlign.center,),
+                      ),
+                    ),
+                  )
                 ],
 
               ),
