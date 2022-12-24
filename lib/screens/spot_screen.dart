@@ -33,62 +33,136 @@ class _SpotScreenState extends State<SpotScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    children: const [Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Icon(Icons.circle_outlined),
-                    ), Text("Raipur"),
-                    SizedBox(
-                      width: 280,
-                    ),
-                    Icon(Icons.close,size: 15,)],
-                  ),Stack(children: const [
-                      Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                        child: Divider(
-                          height: 1,
-                          thickness: 1.4,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 300.0),
-                        child: Icon(Icons.mobiledata_off),
-                      )
-                    ]),
-
-                  Row(
-                    children: const [
-
-                      Padding(
-
+                    children: [
+                      const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: Icon(Icons.circle_outlined),
-                      ), Text("jaipur"),SizedBox(
-                        width: 285,
-
                       ),
-                      Icon(Icons.close,size: 15,),
-
+                      const Text("Raipur"),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                      ),
+                      const Icon(
+                        Icons.close,
+                        size: 15,
+                      )
                     ],
-
+                  ),
+                  Stack(children: const [
+                    Padding(
+                      padding: EdgeInsets.only(top: 10.0),
+                      child: Divider(
+                        height: 1,
+                        thickness: 1.4,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 300.0),
+                      child: Icon(Icons.mobiledata_off),
+                    )
+                  ]),
+                  Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Icon(Icons.circle_outlined),
+                      ),
+                      const Text("Jaipur"),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                      ),
+                      const Icon(
+                        Icons.close,
+                        size: 15,
+                      ),
+                    ],
                   ),
                   InkWell(
                     onTap: () {
+                      print("hEMloo");
                     },
                     child: Container(
                       margin: const EdgeInsets.only(top: 20),
-                      width: 400,height: 30,color: Colors.green,
+                      width: 400,
+                      height: 30,
+                      color: Colors.green,
                       child: const Padding(
                         padding: EdgeInsets.all(7.0),
-                        child: Text("Find Trains", textAlign: TextAlign.center,),
+                        child: Text(
+                          "Find Trains",
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
+                  ),
+                  Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 20.0),
+                        child: Text("SPOT TRAIN"),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 15.0),
+                        child: Icon(Icons.train_outlined),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 5.0, top: 15.0),
+                        child: Text("Train No./Train Name"),
+                      ),
+
+
+                      Padding(
+                        padding: EdgeInsets.only(left: 200.0, top: 15.0),
+                        child: Icon(
+                          Icons.search,
+                          size: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 30.0),
+                        child: Text("LIVE STATION"),
+                      ),
+
+                    ],
+                  ),
+                  Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Icon(Icons.train_outlined),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 5.0, top: 15.0),
+                        child: Text("Rajnandgaon"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 210.0,top: 12.0),
+                        child: Icon(Icons.close),
+                      ),
+
+                      
+
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.0, top: 15.0),
+                        child: Icon(
+                          Icons.search,
+                          size: 15,
+                        ),
+                      ),
+                    ],
                   )
                 ],
-
               ),
             ),
           ],
-
         ),
       ),
     );
